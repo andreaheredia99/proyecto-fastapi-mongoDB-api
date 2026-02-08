@@ -1,0 +1,38 @@
+@host = http://localhost
+@port = 8000
+
+
+
+### OBTENER TODOS LOS LIBROS
+GET {{host}}:{{port}}/books/
+
+
+### OBTENER UN LIBRO POR ID
+GET {{host}}:{{port}}/books/6966a7bddf21018417daf13a
+
+### BORRAR UN LIBRO POR ID
+DELETE {{host}}:{{port}}/books/6966a7bddf21018417daf13a
+
+
+### CREAR UN NUEVO LIBRO
+POST {{host}}:{{port}}/books/
+Content-Type: application/json
+
+{
+    "title": "Estudio en escarlata",
+    "author": "Arthur Conan Doyle",
+    "year": 1887,
+    "pages": 123
+}
+
+
+### ACTUALIZAR UN LIBRO POR ID
+PUT {{host}}:{{port}}/books/6966accadf21018417daf13b
+Content-Type: application/json
+
+{
+    "title": "La Cenicienta modificada",
+    "author": "Autor de la cenicienta",
+    "year": 1887,
+    "pages": 123
+}
